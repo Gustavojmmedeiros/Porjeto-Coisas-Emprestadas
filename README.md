@@ -1,2 +1,2 @@
-# Porjeto-Coisas-Emprestadas
+# Projeto-Coisas-Emprestadas
 Repositório para projeto de Fundamentos de Programação Web
