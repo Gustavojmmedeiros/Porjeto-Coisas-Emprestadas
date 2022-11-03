@@ -1,0 +1,22 @@
+body {
+  background-color: var(--cor-primaria);
+  color: var(--cor-fonte-principal);
+}
+
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex--centro {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex--coluna {
+  flex-direction: column;
+}
