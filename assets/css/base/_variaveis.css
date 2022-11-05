@@ -1,8 +1,15 @@
 :root {
+  --fonte-peso-input: 300;
+
   --fonte-familia-corpo: 'Montserrat', sans-serif;
   --fonte-tamanho-cartao-titulo: 28px;
+  --fonte-tamanaho-input-label: 20px;
+  --fonte-tamanho-formulario-fieldset: 22px;
 
   --cor-primaria: #c26b42f3;
-  --cor-fonte-principal: rgb(26, 24, 24);
-  --cor-sombra-cartao: 0 5px 10px rgba(65, 61, 61, 0.5);
+  --cor-fonte-principal: #1a1818;
+  --cor-cartao: #faebd7;
+  --cor-sombra-cartao: 0 5px 10px #413d3d80;
+  --cor-input: rgba(102, 99, 85, 0.308);
+  --cor-botao: #6e3d26f3;
 }

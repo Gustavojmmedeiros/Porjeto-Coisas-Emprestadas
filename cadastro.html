@@ -8,36 +8,41 @@
   <link rel="stylesheet" href="./assets/css/base/base.css">
   <link rel="stylesheet" href="./assets/css/base/_variaveis.css">
   <link rel="stylesheet" href="./assets/css/componentes/cartao.css">
+  <link rel="stylesheet" href="./assets/css/componentes/inputs.css">
+  <link rel="stylesheet" href="./assets/css/componentes/botao.css">
 </head>
 <body>
-  <main class="container">
+  <main class="container flex flex--centro flex--coluna">
     <div class="cadastro-cabecalho">
       <img src="#" alt="Logo Projeto Coisas Emprestadas" class="cadastro-cabecalho__logo">
 
       <h1 class="cadastro-cabecalho__titulo">Projeto Coisas Emprestadas</h1>
     </div>
     <section class="cartao">
-      <h2 class="cartao__titulo">Realize seu cadastro abaixo</h2>
+      <h2 class="cartao__titulo">Crie sua conta</h2>
+
+      <span>Já possui cadastro? Fazer <a href="./login.html">login</a></span>
 
       <form action="" class="formulario">
         <fieldset>
-          <legend class="formulario__legenda">Informações básicas</legend>
+          <legend class="formulario__legenda">Cadastre-se com seu email</legend>
 
           <div class="input-container">
-            <input type="text" name="nome" placeholder="Nome" required>
+            <input class="input" type="text" name="nome" placeholder="Nome" required>
+            <label class="input-label" for="nome">Nome</label>
           </div>
 
           <div class="input-container">
-            <input type="email" name="email" placeholder="E-mail" required>
+            <input class="input" type="email" name="email" placeholder="E-mail" required>
+            <label class="input-label" for="email">E-mail</label>
           </div>
 
           <div class="input-container">
-            <input type="password" name="senha" placeholder="Senha" required>
+            <input class="input" type="password" name="senha" placeholder="Senha" required>
+            <label class="input-label" for="senha">Senha</label>
           </div>
         </fieldset>
       </form>
-
-      <span>Já possui cadastro? Faça <a href="./login.html">login</a> aqui</span>
 
       <button class="botao">Cadastrar</button>
     </section>

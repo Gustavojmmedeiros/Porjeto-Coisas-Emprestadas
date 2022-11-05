@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="./assets/css/base/base.css">
   <link rel="stylesheet" href="./assets/css/base/_variaveis.css">
   <link rel="stylesheet" href="./assets/css/componentes/cartao.css">
+  <link rel="stylesheet" href="./assets/css/componentes/inputs.css">
+  <link rel="stylesheet" href="./assets/css/componentes/botao.css">
 </head>
 <body>
   <main class="container flex flex--centro flex--coluna">
@@ -18,25 +20,27 @@
     </div>
     
     <section class="cartao">
-      <h2 class="cartao__titulo">Login</h2>
+      <h2 class="cartao__titulo">Realize seu cadastro abaixo</h2>
 
       <form action="" class="formulario">
         <fieldset>
-          <legend class="formulario__legenda">Informações básicas</legend>
+          <legend class="formulario__legenda">Login</legend>
 
           <div class="input-container">
-            <input type="email" name="email" placeholder="E-mail" required>
+            <input class="input" type="email" name="email" placeholder="E-mail" required>
+            <label class="input-label" for="email">E-mail</label>
           </div>
 
           <div class="input-container">
-            <input type="password" name="senha" placeholder="Senha" required>
+            <input class="input" type="password" name="senha" placeholder="Senha" required>
+            <label class="input-label" for="senha">Senha</label>
           </div>
         </fieldset>
       </form>
 
-      <button>Login</button>
+      <span class="span-senha"><a href="#">Esqueci a senha</a></span>
 
-      <span class="span">Esqueceu a <a href="./senha.html">senha</a>?</span>
+      <button class="botao">Cadastrar</button>
     </section>
   </main>
 </body>
