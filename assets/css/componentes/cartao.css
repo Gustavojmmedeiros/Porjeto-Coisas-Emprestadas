@@ -13,7 +13,17 @@
 .cartao__titulo {
   font-size: var(--fonte-tamanho-cartao-titulo);
   margin-bottom: 1rem;
+}
 
+.cartao__titulo-itens {
+  font-size: var(--fonte-tamanho-cartao-titulo);
+  margin-bottom: 1rem;
+  align-self: center;
+}
+
+.cartao__apresentacao {
+  font-size: var(--fonte-tamanho-cartao-apresentacao);
+  font-weight: var(--fonte-peso-cartao-apresentacao);
 }
 
 .span-senha {

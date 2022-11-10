@@ -1,9 +1,12 @@
 :root {
   --fonte-peso-input: 300;
+  --fonte-peso-cartao-apresentacao: 300;
+  --fonte-peso-legenda: 600;
 
   --fonte-familia-corpo: 'Montserrat', sans-serif;
-  --fonte-tamanho-cartao-titulo: 28px;
-  --fonte-tamanaho-input-label: 20px;
+  --fonte-tamanho-cartao-titulo: 30px;
+  --fonte-tamanho-cartao-apresentacao: 22px;
+  --fonte-tamanho-input-label: 18px;
   --fonte-tamanho-formulario-fieldset: 22px;
 
   --cor-primaria: #c26b42f3;
@@ -11,5 +14,6 @@
   --cor-cartao: #faebd7;
   --cor-sombra-cartao: 0 5px 10px #413d3d80;
   --cor-input: rgba(102, 99, 85, 0.308);
+  --cor-textarea: rgb(250, 235, 250);
   --cor-botao: #6e3d26f3;
 }
