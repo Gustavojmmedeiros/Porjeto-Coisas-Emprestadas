@@ -1,0 +1,31 @@
+.cartao {
+  background-color: var(--cor-cartao);
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--cor-sombra-cartao);
+  margin-bottom: 1rem;
+  padding: 1.75rem;
+  width: 50%;
+}
+
+.cartao__titulo {
+  font-size: var(--fonte-tamanho-cartao-titulo);
+  margin-bottom: 1rem;
+}
+
+.cartao__titulo-itens {
+  font-size: var(--fonte-tamanho-cartao-titulo);
+  margin-bottom: 1rem;
+  align-self: center;
+}
+
+.cartao__apresentacao {
+  font-size: var(--fonte-tamanho-cartao-apresentacao);
+  font-weight: var(--fonte-peso-cartao-apresentacao);
+}
+
+.span-senha {
+  margin-bottom: 2rem;
+}

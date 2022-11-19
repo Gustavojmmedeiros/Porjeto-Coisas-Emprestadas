@@ -5,11 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro - Projeto Coisas Emprestadas</title>
-  <link rel="stylesheet" href="./assets/css/base/base.css">
-  <link rel="stylesheet" href="./assets/css/base/_variaveis.css">
-  <link rel="stylesheet" href="./assets/css/componentes/cartao.css">
-  <link rel="stylesheet" href="./assets/css/componentes/inputs.css">
-  <link rel="stylesheet" href="./assets/css/componentes/botao.css">
+  <link rel="stylesheet" href="./assets/base/base.css" type="text/css">
+  <link rel="stylesheet" href="./assets/base/_variaveis.css" type="text/css">
+  <link rel="stylesheet" href="./assets/componentes/cartao.css" type="text/css">
+  <link rel="stylesheet" href="./assets/componentes/inputs.css" type="text/css">
+  <link rel="stylesheet" href="./assets/componentes/botao.css" type="text/css">
 </head>
 <body>
   <main class="container flex flex--centro flex--coluna">
@@ -23,13 +23,18 @@
 
       <span>Já possui cadastro? Fazer <a href="./login.html">login</a></span>
 
-      <form action="recebe_cliente.php" class="formulario" method="POST">
+      <form action="recebe-cliente.php" class="formulario" method="POST">
         <fieldset>
           <legend class="formulario__legenda">Cadastre-se com seu email</legend>
 
           <div class="input-container">
             <input class="input" type="text" name="nome" placeholder="Nome">
             <label class="input-label" for="nome">Nome</label>
+          </div>
+
+          <div class="input-container">
+            <input class="input" type="tel" name="telefone" placeholder="Telefone">
+            <label class="input-label" for="telefone">Telefone</label>
           </div>
 
           <div class="input-container">
@@ -44,7 +49,6 @@
         </fieldset>
         <input type="submit" value="Cadastrar">
       </form>
-
       <!-- <button class="botao">Cadastrar</button> -->
     </section>
   </main>
