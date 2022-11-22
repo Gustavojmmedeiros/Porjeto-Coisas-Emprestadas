@@ -1,6 +1,7 @@
 :root {
   --fonte-peso-input: 300;
   --fonte-peso-cartao-apresentacao: 300;
+  --fonte-peso-link: 500;
   --fonte-peso-legenda: 600;
 
   --fonte-familia-corpo: 'Montserrat', sans-serif;
@@ -11,9 +12,10 @@
 
   --cor-primaria: #c26b42f3;
   --cor-fonte-principal: #1a1818;
+  --cor-fonte-contraste: #ffebd3bb;
   --cor-cartao: #faebd7;
   --cor-sombra-cartao: 0 5px 10px #413d3d80;
   --cor-input: #6663554f;
   --cor-textarea: #faebfa;
-  --cor-botao: #6e3d26f3;
+  --cor-botao: #8a4d31;
 }

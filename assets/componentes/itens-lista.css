@@ -1,0 +1,28 @@
+.lista {
+  display: block;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.itens-lista {
+  box-sizing: border-box;
+  border: 0.5px solid var(--cor-primaria);
+  border-radius: 5px;
+  color: var(--cor-primaria);
+  margin: 2rem;
+  margin-left: 0;
+  padding: 1.2rem;
+}
+
+.itens-lista:hover {
+  background: var(--cor-primaria); 
+}
+
+
+.link-lista {
+  color: var(--cor-fonte-principal);
+  font-size: var(--fonte-tamanho-input-label);
+  text-decoration: none;
+}

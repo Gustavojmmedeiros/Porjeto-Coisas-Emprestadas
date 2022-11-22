@@ -1,15 +1,15 @@
 .botao {
-  align-self: center;
-  background-color: var(--cor-botao);
+  background-color: var(--cor-primaria);
   box-sizing: border-box;
   border: none;
   border-radius: 5px;
   padding: 1.25rem;
-  width: 50%;
+  width: 25%;
 }
 
 .botao:hover {
-  background-color: var(--cor-primaria);
+  background-color: var(--cor-botao);
+  color: var(--cor-fonte-contraste);
   cursor: pointer;
   transition: .8s;
 }

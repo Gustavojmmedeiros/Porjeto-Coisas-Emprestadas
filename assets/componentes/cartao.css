@@ -7,7 +7,7 @@
   box-shadow: var(--cor-sombra-cartao);
   margin-bottom: 1rem;
   padding: 1.75rem;
-  width: 50%;
+  width: 75%;
 }
 
 .cartao__titulo {
