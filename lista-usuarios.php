@@ -10,13 +10,17 @@
     </div>
     
     <section class="cartao">
-      <table border="1">
+      <a href="perfil-usuario.php" class="link-estatico">Voltar</a>
+
+      <table border="1" class="tabela">
         <tr>
-          <td>Id</td>
-          <td>Nome</td>
-          <td>Telefone</td>
-          <td>E-mail</td>
-          <td>Senha</td>
+          <td class='tabela-item'>Id</td>
+          <td class='tabela-item'>Nome</td>
+          <td class='tabela-item'>Telefone</td>
+          <td class='tabela-item'>E-mail</td>
+          <td class='tabela-item'>Senha</td>
+          <td class='tabela-item'>Editar</td>
+          <td class='tabela-item'>Excluir</td>
         </tr>
         <?php
 
@@ -31,13 +35,19 @@
           //Percorre registros encontrados
           while($row = mysqli_fetch_assoc($res)) {
             echo "<tr>
-                    <td>". $row['id'] ."</td>
-                    <td>". $row['nome'] ."</td>
-                    <td>". $row['telefone'] ."</td>
-                    <td>". $row['email'] ."</td>
-                    <td>". $row['senha'] ."</td>
-                    <td><a href='cadastro-usuario.php?id=". $row['id'] ."'>Editar</a></td>
-                    <td><a href='exclui-contato.php?id=". $row['id'] ."'>Excluir</a></td>
+                    <td class='tabela-item'>". $row['id'] ."</td>
+
+                    <td class='tabela-item'>". $row['nome'] ."</td>
+
+                    <td class='tabela-item'>". $row['telefone'] ."</td>
+
+                    <td class='tabela-item'>". $row['email'] ."</td>
+
+                    <td class='tabela-item'>". $row['senha'] ."</td>
+
+                    <td class='tabela-item'><a href='cadastro-usuario.php?id=". $row['id'] ."' class='tabela-item link-estatico'>Editar</a></td>
+
+                    <td class='tabela-item'><a href='exclui-contato.php?id=". $row['id'] ."' class='tabela-item link-estatico'>Excluir</a></td>
                   </tr>";
           }
 

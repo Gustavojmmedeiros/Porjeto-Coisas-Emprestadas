@@ -36,7 +36,7 @@
     <section class="cartao">
       <h2 class="cartao__titulo">Crie sua conta</h2>
 
-      <span>Já possui cadastro? Fazer <a href="./index.php" class="link-estático">login</a></span>
+      <span>Já possui cadastro? Fazer <a href="./index.php" class="link-estatico">login</a></span>
 
       <form action="recebe-usuario.php" class="formulario" method="POST">
         <fieldset>

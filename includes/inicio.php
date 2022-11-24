@@ -1,5 +1,5 @@
 <?php
-
+  
   require "includes/autentica.php";
 
 ?>
@@ -17,5 +17,6 @@
   <link rel="stylesheet" href="./assets/componentes/inputs.css?<?php echo time(); ?>" type="text/css">
   <link rel="stylesheet" href="./assets/componentes/botao.css?<?php echo time(); ?>" type="text/css">
   <link rel="stylesheet" href="./assets/componentes/itens-lista.css?<?php echo time(); ?>" type="text/css">
+  <link rel="stylesheet" href="./assets/componentes/tabela.css?<?php echo time(); ?>" type="text/css">
 </head>
 <body>

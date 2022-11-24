@@ -13,3 +13,8 @@
   cursor: pointer;
   transition: .8s;
 }
+
+.botao-pedido {
+  margin-top: 1rem;
+  width: 25%;
+}

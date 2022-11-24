@@ -18,7 +18,7 @@
       <nav>
         <ul class="lista">
           <li class="itens-lista">
-            <a href="config-usuario.php" class="link-lista">Configurações de conta</a>
+            <a href="config-usuario.php?id=<?php echo $_SESSION['id']?>" class="link-lista">Configurações de conta</a>
           </li>
           <li class="itens-lista">
             <a href="lista-itens.php" class="link-lista">Lista de itens</a>

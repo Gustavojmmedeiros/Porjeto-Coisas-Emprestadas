@@ -7,20 +7,24 @@
   <main class="container flex flex--centro flex--coluna">
     <div class="cadastro-cabecalho">
       <h1 class="cadastro-cabecalho__titulo">Projeto Coisas Emprestadas</h1>
+
     </div>
 
     <section class="cartao">
-      <div>
-        <a href="cadastro-itens.php" class="link-estatico">Cadastrar novo item</a>
-      </div>
+      <a href="cadastro-itens.php" class="link-estatico">Cadastrar novo item</a>
+      <a href="perfil-usuario.php" class="link-estatico">Voltar</a>
 
-      <table border="1">
+      <table border="1" class="tabela">
         <tr>
-          <td>Id Item</td>
-          <td>Nome Item</td>
-          <td>Quantidade</td>
-          <td>Data Início</td>
-          <td>Data Limite</td>
+          <td class="tabela-item">Id Item</td>
+          <td class="tabela-item">Nome Item</td>
+          <td class="tabela-item">Quantidade</td>
+          <td class="tabela-item">Data Início</td>
+          <td class="tabela-item">Data Limite</td>
+          <td class="tabela-item">Descrição</td>
+          <td class="tabela-item">Id Usuário</td>
+          <td class="tabela-item">Editar</td>
+          <td class="tabela-item">Excluir</td>
         </tr>
         <?php
 
@@ -35,18 +39,23 @@
           //Percorre registros encontrados
           while($row = mysqli_fetch_assoc($res)) {
             echo "<tr>
-                    <td>". $row['id_item'] ."</td>
-                    <td>". $row['nome_item'] ."</td>
-                    <td>". $row['quantidade'] ."</td>
-                    <td>". $row['data_inicio'] ."</td>
-                    <td>". $row['data_limite'] ."</td>
-                    <td>". $row['descricao'] ."</td>
-                    <td>
-                      <a href='cadastro-itens.php?id_item=". $row['id_item'] ."'>Editar</a>
-                    </td>
-                    <td>
-                      <a href='exclui-item.php?id_item=". $row['id_item'] ."'>Excluir</a>
-                    </td>
+                    <td class='tabela-item'>". $row['id_item'] ."</td>
+
+                    <td class='tabela-item'>". $row['nome_item'] ."</td>
+
+                    <td class='tabela-item'>". $row['quantidade'] ."</td>
+
+                    <td class='tabela-item'>". $row['data_inicio'] ."</td>
+
+                    <td class='tabela-item'>". $row['data_limite'] ."</td>
+
+                    <td class='tabela-item'>". $row['descricao'] ."</td>
+
+                    <td class='tabela-item'>". $row['usuario_id'] ."</td>
+
+                    <td class='tabela-item'><a href='config-itens.php?id_item=". $row['id_item'] ."' class='tabela-item link-estatico'>Editar</a></td>
+
+                    <td class='tabela-item'><a href='exclui-item.php?id_item=". $row['id_item'] ."' class='tabela-item link-estatico'>Excluir</a></td>
                   </tr>";
           }
 

@@ -22,7 +22,6 @@
     $_SESSION['id'] = $row['id'];
     $_SESSION['nome'] = $row['nome'];
 
-
     header("Location: perfil-usuario.php");
 
   } else {

@@ -1,0 +1,14 @@
+.tabela {
+  border: 1px solid var(--cor-primaria);
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  margin-top: 5px;
+}
+
+.tabela-item {
+  border-radius: 2px;
+  font-family: var(--fonte-familia-corpo);
+  font-size: var(--fonte-tamanho-lista);
+  padding: 0.3rem;
+}

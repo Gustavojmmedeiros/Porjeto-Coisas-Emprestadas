@@ -62,3 +62,7 @@
   padding: 0.5rem;
   resize: none;
 }
+
+#descricao:focus::placeholder {
+  color: transparent;
+}

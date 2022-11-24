@@ -21,7 +21,11 @@
     <section class="cartao">
       <h2 class="cartao__titulo">Acesse sua conta</h2>
 
+      <span>Cadastre-se <a href="./cadastro-usuario.php" class="link-estatico">aqui</a></span>
+
       <?php
+
+        include "includes/conecta.php";
 
         if (isset($_GET['erro'])) {
           echo '<p style="text-align: center; color: red">Usuário e/ou senha incorreta(s).</p>';
@@ -51,13 +55,9 @@
           </div>
         </fieldset>
 
-        <input type="submit" value="Entrar">
+        <input class="botao" type="submit" value="Entrar">
 
       </form>
-
-      <span class="span-senha">
-        <a href="recupera-senha.php">Esqueci a senha</a>
-      </span>
     </section>
   </main>
 </body>

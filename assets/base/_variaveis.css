@@ -9,6 +9,7 @@
   --fonte-tamanho-cartao-apresentacao: 22px;
   --fonte-tamanho-input-label: 18px;
   --fonte-tamanho-formulario-fieldset: 22px;
+  --fonte-tamanho-lista: 14px;
 
   --cor-primaria: #c26b42f3;
   --cor-fonte-principal: #1a1818;
@@ -16,6 +17,6 @@
   --cor-cartao: #faebd7;
   --cor-sombra-cartao: 0 5px 10px #413d3d80;
   --cor-input: #6663554f;
-  --cor-textarea: #faebfa;
+  --cor-textarea: #faf3eb;
   --cor-botao: #8a4d31;
 }
