@@ -12,8 +12,8 @@
 
   if (empty($id_item)) {
     $sql = "INSERT INTO itens (nome_item, quantidade, data_inicio,  data_limite, descricao, usuario_id) 
-    VALUES 
-    ('$nome_item', '$quantidade', '$data_inicio', '$data_limite', '$descricao', '$usuario_id')";
+            VALUES 
+            ('$nome_item', '$quantidade', '$data_inicio', '$data_limite', '$descricao', '$usuario_id')";
 
     $res = mysqli_query($conn, $sql);
 

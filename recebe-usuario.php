@@ -13,12 +13,13 @@
     $sql = "INSERT INTO usuarios (nome, telefone, email, senha) 
               VALUES 
               ('$nome', '$telefone', '$email', '$senha')";
+
     
     //Envia os dados SQL para o MySQL
     $res = mysqli_query($conn, $sql);
   
     //Checa inserção com sucesso
-    if($res) {
+    if ($res) {
       //Redireciona usuário para listagem
       header("Location: lista-usuarios.php");
     } else {
@@ -33,6 +34,7 @@
                     senha = '$senha'
             WHERE 
                     id = '$id'";
+
 
     //Envia os dados SQL para o MySQL
     $res = mysqli_query($conn, $sql);

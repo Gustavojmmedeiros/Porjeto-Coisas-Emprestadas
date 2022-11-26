@@ -25,6 +25,7 @@
     header("Location: perfil-usuario.php");
 
   } else {
+    
     header("Location: index.php?erro=1");
   }
 ?>

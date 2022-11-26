@@ -26,6 +26,9 @@
           <li class="itens-lista">
             <a href="lista-usuarios.php" class="link-lista">Lista de contatos</a>
           </li>
+          <li class="itens-lista">
+            <a href="empresta.php" class="link-lista">Solicitar Item</a>
+          </li>
         </ul>
       </nav>
 

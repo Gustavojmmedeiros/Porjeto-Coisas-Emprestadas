@@ -11,8 +11,12 @@
     </div>
 
     <section class="cartao">
+      <h2 class="cartao__titulo">Olá, <?php echo $_SESSION['nome'] ?></h2>
+      
       <a href="cadastro-itens.php" class="link-estatico">Cadastrar novo item</a>
       <a href="perfil-usuario.php" class="link-estatico">Voltar</a>
+
+      <legend class="formulario__legenda">Seus itens</legend>
 
       <table border="1" class="tabela">
         <tr>
