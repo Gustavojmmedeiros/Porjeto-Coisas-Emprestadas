@@ -41,9 +41,12 @@
   
     //Checa atualização com sucesso
     if($res) {
+
       //Redireciona usuário para listagem
       header("Location: lista-usuarios.php");
+
     } else {
+      
       echo "Erro ao atualizar!";
     }
   }

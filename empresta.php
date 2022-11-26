@@ -16,6 +16,7 @@
   $pechador_email = "";
 
   if (isset($_GET['id_emprestimo'])) {
+
     $id_emprestimo = $_GET['id_emprestimo'];
 
     $sql = "SELECT * FROM emprestados WHERE id_emprestimo = $id_emprestimo";
@@ -27,7 +28,7 @@
     $id_emprestimo = $row['id_emprestimo'];
     $emprestador_id = $row['emprestador_id'];
     $item_id = $row['item_id'];
-    //$pechador_id = $_SESSION['id'];
+
 
     if (!isset($_SESSION)) {
       $_SESSION = array();
@@ -47,8 +48,8 @@
 
       <form class="bloco-select" action="recebe-emprestado.php" method="POST">
 
-        <input type="hidden" name="id_emprestimo">
-        <input type="hidden" name="pechador_id" value="<?php echo $pechador_id ?>">
+        <input type="hidden" name="id_emprestimo" value="<?php echo $id_emprestimo?>">
+        <input type="hidden" name="pechador_id" value="<?php echo $pechador_id?>">
 
         <label for="emprestador" class="select-label">Emprestador</label>
         <select name="emprestador_id" class="select" >
@@ -86,7 +87,6 @@
           ?>
         </select>
 
-        <?php echo $_SESSION['id'] ?>
         <input type="submit" class="botao botao-pedido" value="Enviar Pedido">
 
       </form>

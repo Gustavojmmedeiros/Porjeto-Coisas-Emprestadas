@@ -22,8 +22,6 @@
 
   if ($res) {
 
-    //$item_id = $_POST['item_id'];
-
     $sql1 = "SELECT nome_item FROM itens WHERE id_item = $item_id";
 
     $res1 = mysqli_query($conn, $sql1);
@@ -35,7 +33,7 @@
 
     if ($res1) {
 
-      //$pechador_id = $_POST['pechador_id'];
+      $pechador_id = $_POST['pechador_id'];
 
       $sql2 = "SELECT nome, telefone, email FROM usuarios WHERE id = $pechador_id";
 
@@ -43,9 +41,9 @@
 
       $row2 = mysqli_fetch_assoc($res2);
 
-      $pechador_nome = $row2['pechador_nome'];
-      $pechador_telefone = $row2['pechador_telefone'];
-      $pechador_email = $row2['pechador_email'];   
+      $pechador_nome = $row2['nome'];
+      $pechador_telefone = $row2['telefone'];
+      $pechador_email = $row2['email'];   
 
     }
   }

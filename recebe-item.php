@@ -37,8 +37,11 @@
     $res = mysqli_query($conn, $sql);
 
     if ($res){
+
       header("Location: lista-itens.php");
+
     } else {
+      
       echo "Erro ao atualizar dados!";
     }
   }

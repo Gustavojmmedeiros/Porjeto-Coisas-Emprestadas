@@ -8,8 +8,18 @@
     <div class="cadastro-cabecalho">
       <h1 class="cadastro-cabecalho__titulo">Projeto Coisas Emprestadas</h1>
     </div>
-    
+
     <section class="cartao">
+
+      <?php 
+
+        include "includes/conecta.php";
+
+        if (isset($_GET['erro'])) {
+          echo '<p style="text-align": center; color: red">Você não tem autorização para excluir esta conta!</p>';
+        }
+
+?>
       <a href="perfil-usuario.php" class="link-estatico">Voltar</a>
 
       <table border="1" class="tabela">
@@ -47,7 +57,7 @@
 
                     <td class='tabela-item'><a href='cadastro-usuario.php?id=". $row['id'] ."' class='tabela-item link-estatico'>Editar</a></td>
 
-                    <td class='tabela-item'><a href='exclui-contato.php?id=". $row['id'] ."' class='tabela-item link-estatico'>Excluir</a></td>
+                    <td class='tabela-item'><a href='exclui-usuario.php?id=". $row['id'] ."' class='tabela-item link-estatico'>Excluir</a></td>
                   </tr>";
           }
 
