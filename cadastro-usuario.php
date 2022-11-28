@@ -3,6 +3,7 @@
   include "includes/inicio.php";
   include "includes/conecta.php";
 
+  //Inicia as variáveis
   $id = "";
   $nome = "";
   $telefone = "";

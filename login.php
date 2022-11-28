@@ -28,6 +28,5 @@
     
     header("Location: index.php?erro=1");
 
-    // Criar um erro de usuário não existente
   }
 ?>

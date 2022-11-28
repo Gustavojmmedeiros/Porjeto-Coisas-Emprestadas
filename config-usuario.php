@@ -14,8 +14,10 @@
     $id = $_GET['id'];
 
     $sql = "SELECT * FROM usuarios WHERE id = $id";
+
     //Envia a consulta para obter dados do usuário
     $res = mysqli_query($conn, $sql);
+    
     //Armazena estes dados
     $row = mysqli_fetch_assoc($res);
 

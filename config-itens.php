@@ -3,6 +3,7 @@
   include "includes/inicio.php";
   include "includes/conecta.php";
 
+  //(Re)inicia as variáveis
   $id_item = "";
   $nome_item = "";
   $quantidade = "";
@@ -12,13 +13,16 @@
   $disponivel = "";
   $usuario_id = "";
 
+  //Verifica se foi enviado 'id' via get
   if (isset($_GET['id_item'])){
     $id_item = $_GET['id_item'];
 
     $sql = "SELECT * FROM itens WHERE id_item = $id_item";
 
+    //Envia a consulta para obter dados do item
     $res = mysqli_query($conn, $sql);
 
+    //Armazena estes dados
     $row = mysqli_fetch_assoc($res);
 
     $id_item = $row['id_item'];
@@ -29,6 +33,14 @@
     $descricao = $row['descricao'];
     $disponivel = $row['disponivel'];
     $usuario_id = $row['usuario_id'];
+
+    //Verifica se tem ou não sessão
+    if (!isset($_SESSION['id'])) {
+
+      $_SESSION = array();
+
+      header("Location: index.php?autentica=1");
+    }
   }
   
 ?>

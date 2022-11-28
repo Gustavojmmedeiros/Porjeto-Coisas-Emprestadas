@@ -3,6 +3,7 @@
   include "includes/inicio.php";
   include "includes/conecta.php";
 
+  //Inicia as variáveis
   $id_emprestimo = "";
   $emprestador_id = "";
   $emprestador_nome = "";
@@ -10,21 +11,23 @@
   $emprestador_email = "";
   $item_id = "";
   $item_nome = "";
-  //Se quebrar, o problema pode estar aqui
   $disponivel = "";
   $pechador_id = $_SESSION['id'];
   $pechador_nome = "";
   $pechador_telefone = "";
   $pechador_email = "";
 
+  //Verifica se foi enviado 'id' via get
   if (isset($_GET['id_emprestimo'])) {
 
     $id_emprestimo = $_GET['id_emprestimo'];
 
     $sql = "SELECT * FROM emprestados WHERE id_emprestimo = $id_emprestimo";
 
+    //Envia a consulta para obter dados do item
     $res = mysqli_query($conn, $sql);
 
+    //Armazena estes dados
     $row = mysqli_fetch_assoc($res);
 
     $id_emprestimo = $row['id_emprestimo'];
@@ -32,6 +35,7 @@
     $item_id = $row['item_id'];
     $disponivel = $row['disponivel'];
 
+    //Verifica se tem ou não sessão
     if (!isset($_SESSION)) {
       
       $_SESSION = array();
@@ -66,7 +70,7 @@
           $id = $_SESSION['id'];
 
           //Monta o código SQL para inserir os dados do formulário no MySQL
-          $sql = "SELECT * FROM itens WHERE usuario_id != $id";
+          $sql = "SELECT * FROM itens WHERE usuario_id != $id AND disponivel = 'D'";
 
           //Envia os dados SQL para o MySQL
           $res = mysqli_query($conn, $sql);

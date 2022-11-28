@@ -20,7 +20,7 @@
     //Checa inserção com sucesso
     if ($res) {
 
-      //Redireciona usuário para listagem
+      //Redireciona usuário para perfil
       header("Location: perfil-usuario.php");
     } else {
 
@@ -45,7 +45,7 @@
       //Checa atualização com sucesso
       if($res) {
   
-        //Redireciona usuário para listagem
+        //Redireciona usuário para perfil
         header("Location: perfil-usuario.php");
   
       } else {

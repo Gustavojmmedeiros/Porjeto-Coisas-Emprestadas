@@ -12,14 +12,18 @@
   $usuario_id = $_POST['usuario_id'];
 
   if (empty($id_item)) {
+    //Monta o código SQL para inserir os dados do formulário no MySQL
     $sql = "INSERT INTO itens (nome_item, quantidade, data_inicio,  data_limite, descricao, disponivel, usuario_id) 
             VALUES 
             ('$nome_item', '$quantidade', '$data_inicio', '$data_limite', '$descricao', '$disponivel', '$usuario_id')";
 
+    //Envia os dados SQL para o MySQL
     $res = mysqli_query($conn, $sql);
 
+    //Checa inserção com sucesso
     if ($res) {
 
+      //Redireciona usuário para listagem
       header("Location: lista-itens.php");
     } else {
 
@@ -35,10 +39,13 @@
                 usuario_id = '$usuario_id'
             WHERE id_item = '$id_item'";
 
+    //Envia os dados SQL para o MySQL
     $res = mysqli_query($conn, $sql);
 
+    //Checa atualização com sucesso
     if ($res){
 
+      //Redireciona usuário para listagem
       header("Location: lista-itens.php");
 
     } else {
