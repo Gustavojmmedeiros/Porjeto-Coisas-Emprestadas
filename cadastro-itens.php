@@ -28,7 +28,7 @@
     $data_inicio = $row['data_inicio'];
     $data_limite = $row['data_limite'];
     $descricao = $row['descricao'];
-    // $disponivel = $row['disponivel'];
+    $disponivel = $row['disponivel'];
 
     if (!isset($_SESSION['id'])) {
 

@@ -10,7 +10,8 @@
   $emprestador_email = "";
   $item_id = "";
   $item_nome = "";
-  $item_disponivel = "";
+  //Se quebrar, o problema pode estar aqui
+  $disponivel = "";
   $pechador_id = $_SESSION['id'];
   $pechador_nome = "";
   $pechador_telefone = "";
@@ -29,7 +30,7 @@
     $id_emprestimo = $row['id_emprestimo'];
     $emprestador_id = $row['emprestador_id'];
     $item_id = $row['item_id'];
-    $item_disponivel = $row['item_disponivel'];
+    $disponivel = $row['disponivel'];
 
     if (!isset($_SESSION)) {
       
@@ -85,7 +86,7 @@
 
                     <td class='tabela-item'>". $row['descricao'] ."</td>
 
-                    <td class='tabela-item'>". $row['item_disponivel'] ."</td>
+                    <td class='tabela-item'>". $row['disponivel'] ."</td>
                     
                     <td class='tabela-item'>". $row['usuario_id'] ."</td>";
           }
@@ -96,7 +97,7 @@
 
         <input type="hidden" name="id_emprestimo" value="<?php echo $id_emprestimo?>">
         <input type="hidden" name="pechador_id" value="<?php echo $pechador_id?>">
-        <input type="hidden" name="item_disponivel" value="<?php echo $item_disponivel?>">
+        <input type="hidden" name="item_disponivel" value="<?php echo $disponivel?>">
 
         <label for="emprestador" class="select-label">Emprestador</label>
         <select name="emprestador_id" class="select" >
@@ -130,11 +131,10 @@
               echo "<option value='".$row['id_item']."'>".$row['nome_item']."</option>";
             }
           }
-
+          
           ?>
         </select>
 
-        <?php echo $item_disponivel ?>
         <input type="submit" class="botao botao-pedido" value="Enviar Pedido">
 
       </form>
