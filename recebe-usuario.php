@@ -21,7 +21,7 @@
     if ($res) {
 
       //Redireciona usuário para perfil
-      header("Location: perfil-usuario.php");
+      header("Location: index.php");
     } else {
 
       echo "Erro ao inserir!";
@@ -46,7 +46,7 @@
       if($res) {
   
         //Redireciona usuário para perfil
-        header("Location: perfil-usuario.php");
+        header("Location: index.php");
   
       } else {
         

@@ -11,7 +11,7 @@
     </div>
 
     <section class="cartao">
-      <h2 class="cartao__titulo">Olá, <?php echo $_SESSION['nome'] ?></h2>
+      <h2 class="cartao__titulo">Olá, <?php echo $_SESSION['nome']?></h2>
 
       <a href="logout.php" class="link-estatico">Sair</a>
 
