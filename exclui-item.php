@@ -10,4 +10,5 @@
   $res = mysqli_query($conn, $sql);
 
   header("Location: lista-itens.php");
+  
 ?>

@@ -17,7 +17,7 @@
     header("Location: index.php");
   } else {
 
-    header("Location: lista-usuarios.php?erro=1");
+    header("Location: lista-usuarios.php?erro=2");
   }
   
 ?>

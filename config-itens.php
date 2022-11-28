@@ -9,6 +9,8 @@
   $data_inicio = "";
   $data_limite = "";
   $descricao = "";
+  $disponivel = "";
+  $usuario_id = "";
 
   if (isset($_GET['id_item'])){
     $id_item = $_GET['id_item'];
@@ -25,6 +27,8 @@
     $data_inicio = $row['data_inicio'];
     $data_limite = $row['data_limite'];
     $descricao = $row['descricao'];
+    $disponivel = $row['disponivel'];
+    $usuario_id = $row['usuario_id'];
   }
   
 ?>
@@ -43,6 +47,7 @@
 
           <input type="hidden" name="id_item" value="<?php echo $id_item?>">
           <input type="hidden" name="usuario_id" value="<?php echo $usuario_id?>">
+          <input type="hidden" name="disponivel" value="<?php echo $disponivel?>">
 
           <legend class="formulario__legenda">Dados do item</legend>
 

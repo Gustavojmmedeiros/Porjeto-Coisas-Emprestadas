@@ -21,10 +21,10 @@
             <a href="config-usuario.php?id=<?php echo $_SESSION['id']?>" class="link-lista">Configurações de conta</a>
           </li>
           <li class="itens-lista">
-            <a href="lista-itens.php" class="link-lista">Lista de itens</a>
+            <a href="lista-itens.php" class="link-lista">Seus itens</a>
           </li>
           <li class="itens-lista">
-            <a href="lista-usuarios.php" class="link-lista">Lista de contatos</a>
+            <a href="lista-usuarios.php" class="link-lista">Lista de usuários</a>
           </li>
           <li class="itens-lista">
             <a href="empresta.php" class="link-lista">Solicitar Item</a>

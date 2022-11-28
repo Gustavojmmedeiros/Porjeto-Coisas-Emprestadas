@@ -8,31 +8,32 @@
   $data_inicio = $_POST['data_inicio'];
   $data_limite = $_POST['data_limite'];
   $descricao = $_POST['descricao'];
+  $disponivel = $_POST['disponivel'];
   $usuario_id = $_POST['usuario_id'];
 
   if (empty($id_item)) {
-    $sql = "INSERT INTO itens (nome_item, quantidade, data_inicio,  data_limite, descricao, usuario_id) 
+    $sql = "INSERT INTO itens (nome_item, quantidade, data_inicio,  data_limite, descricao, disponivel, usuario_id) 
             VALUES 
-            ('$nome_item', '$quantidade', '$data_inicio', '$data_limite', '$descricao', '$usuario_id')";
+            ('$nome_item', '$quantidade', '$data_inicio', '$data_limite', '$descricao', '$disponivel', '$usuario_id')";
 
     $res = mysqli_query($conn, $sql);
 
     if ($res) {
+
       header("Location: lista-itens.php");
     } else {
+
       echo "Erro ao adicionar item";
     }
 
   } else {
-    $sql = "UPDATE itens SET
-                    nome_item = '$nome_item',
-                    quantidade = '$quantidade',
-                    data_inicio = '$data_inicio',
-                    data_limite = '$data_limite',
-                    descricao = '$descricao',
-                    usuario_id = '$usuario_id'
-            WHERE
-                    id_item = '$id_item'";
+
+    $sql = "UPDATE itens 
+            SET nome_item = '$nome_item', quantidade = '$quantidade', 
+                data_inicio = '$data_inicio', data_limite = '$data_limite', 
+                descricao = '$descricao', disponivel = '$disponivel', 
+                usuario_id = '$usuario_id'
+            WHERE id_item = '$id_item'";
 
     $res = mysqli_query($conn, $sql);
 

@@ -15,8 +15,8 @@
 
         include "includes/conecta.php";
 
-        if (isset($_GET['erro'])) {
-          echo '<p style="text-align": center; color: red">Você não tem autorização para excluir esta conta!</p>';
+        if (isset($_GET['erro']) == 2) {
+          echo '<p style="text-align: center; color: red">Você não tem acesso as configurações de outras contas.</p>';
         }
 
 ?>
@@ -44,21 +44,21 @@
           
           //Percorre registros encontrados
           while($row = mysqli_fetch_assoc($res)) {
-            echo "<tr>
-                    <td class='tabela-item'>". $row['id'] ."</td>
-
-                    <td class='tabela-item'>". $row['nome'] ."</td>
-
-                    <td class='tabela-item'>". $row['telefone'] ."</td>
-
-                    <td class='tabela-item'>". $row['email'] ."</td>
-
-                    <td class='tabela-item'>". $row['senha'] ."</td>
-
-                    <td class='tabela-item'><a href='cadastro-usuario.php?id=". $row['id'] ."' class='tabela-item link-estatico'>Editar</a></td>
-
-                    <td class='tabela-item'><a href='exclui-usuario.php?id=". $row['id'] ."' class='tabela-item link-estatico'>Excluir</a></td>
-                  </tr>";
+              echo "<tr>
+                      <td class='tabela-item'>". $row['id'] ."</td>
+  
+                      <td class='tabela-item'>". $row['nome'] ."</td>
+  
+                      <td class='tabela-item'>". $row['telefone'] ."</td>
+  
+                      <td class='tabela-item'>". $row['email'] ."</td>
+  
+                      <td class='tabela-item'>". $row['senha'] ."</td>
+  
+                      <td class='tabela-item'><a href='config-usuario.php?id=". $row['id'] ."' class='tabela-item link-estatico'>Editar</a></td>
+  
+                      <td class='tabela-item'><a href='exclui-usuario.php?id=". $row['id'] ."' class='tabela-item link-estatico'>Excluir</a></td>
+                    </tr>";
           }
 
         ?>

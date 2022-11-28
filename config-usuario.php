@@ -24,6 +24,11 @@
     $telefone = $row['telefone'];
     $email = $row['email'];
     $senha = $row['senha'];
+
+    if ($_SESSION['id'] != $id) {
+
+      header("Location: lista-usuarios.php?erro=2");
+    }
   }
 
 ?>

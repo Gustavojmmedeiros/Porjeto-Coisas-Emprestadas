@@ -3,12 +3,13 @@
   include "includes/conecta.php";
   session_start();
 
-  //Receber id e id_item, colocar os valores dentro da tabela emprestados - vai ter que alterar algumas coisas na tabela, adicionar o id do item, por exemplo
+  //TO-DO: retirar item de emprestados quando alguem solicitar
 
   $id_emprestimo = $_POST['id_emprestimo'];
   $emprestador_id = $_POST['emprestador_id'];
   $item_id = $_POST['item_id'];
   $pechador_id = $_POST['pechador_id'];
+  $item_disponivel = $_POST['item_disponivel'];
 
   $sql = "SELECT nome, telefone, email FROM usuarios WHERE id = $emprestador_id";
 
@@ -22,13 +23,14 @@
 
   if ($res) {
 
-    $sql1 = "SELECT nome_item FROM itens WHERE id_item = $item_id";
+    $sql1 = "SELECT nome_item, disponivel FROM itens WHERE id_item = $item_id";
 
     $res1 = mysqli_query($conn, $sql1);
 
     $row1 = mysqli_fetch_assoc($res1);
 
     $item_nome = $row1['nome_item']; 
+    $item_disponivel = $row['disponivel'];
 
 
     if ($res1) {
@@ -50,9 +52,9 @@
 
   if (empty($id_emprestimo)) {
 
-    $sql3 = "INSERT INTO emprestados (emprestador_id, emprestador_nome, emprestador_telefone,emprestador_email, item_id, item_nome, pechador_id, pechador_nome, pechador_telefone, pechador_email)
+    $sql3 = "INSERT INTO emprestados (emprestador_id, emprestador_nome, emprestador_telefone,emprestador_email, item_id, item_nome, item_disponivel, pechador_id, pechador_nome, pechador_telefone, pechador_email)
             VALUES 
-            ('$emprestador_id', '$emprestador_nome', '$emprestador_telefone', '$emprestador_email', '$item_id', '$item_nome', '$pechador_id', '$pechador_nome', '$pechador_telefone', '$pechador_email')";
+            ('$emprestador_id', '$emprestador_nome', '$emprestador_telefone', '$emprestador_email', '$item_id', '$item_nome', '$item_disponivel', '$pechador_id', '$pechador_nome', '$pechador_telefone', '$pechador_email')";
     
     $res3 = mysqli_query($conn, $sql3);
 
@@ -61,10 +63,17 @@
       header("Location: empresta.php");
       echo "Item solicitado com sucesso!";
 
+      // $sql4 = ;
+
     } else {
 
       echo "Erro ao solicitar item!";
     }
+
+    // $sql4 = "INSERT INTO itens (id_item, nome_item, usuario_id)
+    //         VALUES ('$item_id', '$item_nome', '$emprestador_id') 
+    //         WHERE pechador_id = $id";
+    
 
   } else {
 
@@ -75,6 +84,7 @@
                     emprestador_email = '$emprestador_email',
                     item_id = '$item_id',
                     item_nome = '$item_nome',
+                    item_disponivel = '$item_disponivel',
                     pechador_id = '$pechador_id',
                     pechador_nome = '$pechador_nome',
                     pechador_telefone = '$pechador_telefone',

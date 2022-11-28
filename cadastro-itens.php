@@ -9,6 +9,8 @@
   $data_inicio = "";
   $data_limite = "";
   $descricao = "";
+  // Ajeitar o problema de sobrescrever o valor de disponivel
+  $disponivel = "D";
   $usuario_id = $_SESSION['id'];
 
   if (isset($_GET['id_item'])){
@@ -26,6 +28,7 @@
     $data_inicio = $row['data_inicio'];
     $data_limite = $row['data_limite'];
     $descricao = $row['descricao'];
+    // $disponivel = $row['disponivel'];
 
     if (!isset($_SESSION['id'])) {
 
@@ -54,6 +57,7 @@
 
           <input type="hidden" name="id_item" value="<?php echo $id_item?>">
           <input type="hidden" name="usuario_id" value="<?php echo $usuario_id?>">
+          <input type="hidden" name="disponivel" value="<?php echo $disponivel?>">
 
           <legend class="formulario__legenda">Dados do item</legend>
 
@@ -81,6 +85,7 @@
             <textarea name="descricao" id="descricao" cols="30" rows="10" placeholder="Descrição do item" value="<?php echo $descricao?>"></textarea>
           </div>
         </fieldset>
+
         <input type="submit" class="botao" value="Cadastrar">
 
       </form>
